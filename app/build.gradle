@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+android {
+    compileSdkVersion 24
+    buildToolsVersion '26.0.2'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.mtianyan.mtianyan001"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi','x86' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        javaCompileOptions{
+            annotationProcessorOptions{
+                includeCompileClasspath = true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    //Tablayout点击同步
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //Bmob
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //以下SDK开发者请根据需要自行选择
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    //3.5.5：请务必查看下面注释[1]
+    compile 'cn.bmob.android:bmob-sdk:3.5.5'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile('cn.bmob.android:http-legacy:1.0') {
+        exclude group: 'io.reactivex'
+    }
+    //search界面
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    //
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+    //butterknife
+    annotationProcessor 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.jakewharton:butterknife-compiler:8.4.0'
+    //RxVolley
+    compile('com.kymjs.rxvolley:rxvolley:1.1.2') {
+        exclude group: 'io.reactivex'
+    }
+    //下拉刷新
+    compile 'com.cjj.materialrefeshlayout:library:1.3.0'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    //Picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+}
+

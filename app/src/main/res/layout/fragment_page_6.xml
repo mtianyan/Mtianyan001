@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/user_frgament_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.mtianyan.mtianyan001.widget.CircleImageView
+
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/icon_mtianyan"
+                   />
+                <TextView
+                    android:id="@+id/edit_user"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_bg"
+                    android:gravity="center"
+                    android:text="编辑资料"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <!--用户名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名:"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <!--性别-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别:"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/et_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <!--年龄-->
+
+
+            <!--简介-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="简介:"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/btn_update_ok"
+                android:layout_weight="1"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginBottom="@dimen/default_general_margin"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_marginRight="@dimen/default_general_margin"
+                android:layout_marginTop="@dimen/default_long_margin"
+                android:background="@drawable/corner_btn"
+                android:gravity="center"
+                android:text="确认修改"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_medium_text_size"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_courier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="物流查询"
+                android:textSize="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.5"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="归属地查询"
+                android:textSize="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:alpha="0.5"
+                android:background="@color/colorPrimary"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/btn_exit_user"
+                android:layout_weight="1"
+                android:layout_height="@dimen/login_button_height"
+                android:layout_marginBottom="@dimen/default_general_margin"
+                android:layout_marginLeft="@dimen/default_general_margin"
+                android:layout_marginRight="@dimen/default_general_margin"
+                android:layout_marginTop="@dimen/default_long_margin"
+                android:background="@drawable/corner_btn"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_medium_text_size" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>

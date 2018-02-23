@@ -1,0 +1,78 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light" />
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- All customizations that are NOT specific to a particular LiveApi-level can go here. -->
+        <item name="android:listDivider">@drawable/default_line</item>
+    </style>
+    <!--全屏主題-->
+    <style name="NoActivityFullscreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="BaseAppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+
+    <!-- StatusBar为透明色 -->
+    <style name="ColorTranslucentTheme" parent="@style/BaseAppTheme" />
+
+    <!-- 主界面 设置Style -->
+    <style name="MainActivityColorTranslucentTheme" parent="@style/BaseAppTheme" />
+
+
+    <!--&lt;!&ndash;离线缓存进度条Style&ndash;&gt;-->
+    <!--<style name="NumberProgressBar_Beauty_Red">-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_width">match_parent</item>-->
+        <!--<item name="progress_max">100</item>-->
+        <!--&lt;!&ndash;<item name="progress_current">0</item>&ndash;&gt;-->
+        <!--<item name="progress_unreached_color">@color/gray_light</item>-->
+        <!--<item name="progress_reached_color">@color/colorPrimary</item>-->
+        <!--<item name="progress_text_size">10sp</item>-->
+        <!--<item name="progress_text_color">#FF3D7F</item>-->
+        <!--<item name="progress_reached_bar_height">20dp</item>-->
+        <!--<item name="progress_unreached_bar_height">20dp</item>-->
+    <!--</style>-->
+
+    <style name="CollapsingToolbarTitleStyle.About" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <!--Theme Dialog style-->
+    <style name="AppTheme.AppCompat.Dialog.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:maxWidth">1080dp</item>
+    </style>
+
+    <!--ToolBar TextSize style-->
+    <style name="ToolBar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--ToolBar TextSize style-->
+    <style name="ToolBar.TitleTextApp" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+    <!--自定义Dialog-->
+    <style name="pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+    <style name="Theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

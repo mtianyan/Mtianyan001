@@ -1,0 +1,30 @@
+<android.support.design.widget.AppBarLayout android:id="@+id/app_bar_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:elevation="@dimen/app_bar_elevation">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/ToolBar.TitleText" >
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:text="我是个跑马灯等等等等等我是个跑马灯等等等等等"
+            android:textSize="@dimen/abc_text_size_title_material_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true" />
+    </android.support.v7.widget.Toolbar>
+
+</android.support.design.widget.AppBarLayout>

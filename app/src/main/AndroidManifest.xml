@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mtianyan.mtianyan001">
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--读取日志-->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <application
+        android:name=".application.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--splash闪屏页设置成入口-->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/NoActivityFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--设置-->
+
+        <activity
+            android:name=".ui.SettingActivity"
+            >
+        </activity>
+        <!--主页-->
+
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".MainActivity"
+            ></activity>
+        <!--引导页-->
+        <activity android:name=".ui.GuideActivity"
+            android:theme="@style/NoActivityFullscreen"
+            ></activity>
+        <!--登录-->
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.LoginActivity">
+        </activity>
+        <!--注册-->
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.RegisterActivity">
+        </activity>
+        <!--忘记密码-->
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.ForgetPasswordActivity">
+        </activity>
+        <provider
+            android:authorities="com.mtianyan.mtianyan001.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.PhoneActivity">
+
+        </activity><activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.CourierActivity">
+
+        </activity><activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.BrowserActivity">
+
+        </activity>
+  <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.MtianyanInfoActivity">
+
+        </activity> <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".ui.VipActivity">
+
+        </activity>
+    </application>
+
+</manifest>
